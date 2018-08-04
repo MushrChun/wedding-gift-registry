@@ -25,6 +25,7 @@ class Layout extends Component {
             <Aux>
                 <HeadBar drawerTogger={this.sideDrawerToggleHandler}/>
                 <SideDrawer isOpen={this.state.showSideDrawer} close={this.sideDrawerCloseHandler}/>
+                {this.props.children}
             </Aux>
         )
     }
