@@ -4,7 +4,7 @@ class Trend extends Component {
     render () {
         return (
             <div>
-                <h1> Trend </h1>
+                <h1> Trend Page... </h1>
             </div>
         )
     }
