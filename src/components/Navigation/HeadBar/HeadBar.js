@@ -29,7 +29,7 @@ const headBar = (props) => {
         <Aux>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+                    <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={props.drawerTogger}>
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="title" color="inherit" className={classes.flex}>
