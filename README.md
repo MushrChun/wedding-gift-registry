@@ -10,6 +10,7 @@ Practise building Single-page Application with React ecosystem.
 - npm > 8.9
 
 ## How to use
+- npm install
 - npm start
 - navigate to http://localhost:3000
 

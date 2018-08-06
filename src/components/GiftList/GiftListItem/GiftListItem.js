@@ -10,19 +10,19 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 
 const styles = theme => ({
     root: {
-      width: '100%',
-      maxWidth: 360,
-      backgroundColor: theme.palette.background.paper,
+        width: '100%',
+        maxWidth: 360,
+        backgroundColor: theme.palette.background.paper,
     },
-  });
-  
+});
+
 
 const giftListItem = (props) => {
 
     const { classes } = props;
 
     return (
-        <ListItem 
+        <ListItem
             button
             role={undefined}
             dense

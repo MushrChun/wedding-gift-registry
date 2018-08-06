@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
     root: {
-        padding: '0 20px;',
+        padding: '20px 25px;',
     }
 });
 
@@ -19,11 +19,10 @@ class Home extends Component {
     render() {
         return (
             <div className={this.props.classes.root}>
-                <h1>
-                    <Typography variant="display1" gutterBottom>
-                        <HomeIcon /> | Wish List
-                    </Typography>
-                </h1>
+
+                <Typography variant="display1" gutterBottom>
+                    <HomeIcon /> | Wish List
+                </Typography>
 
                 <Paper square={true}>
                     <GiftList gifts={this.state.gifts} />

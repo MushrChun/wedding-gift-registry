@@ -21,8 +21,7 @@ const styles = theme => ({
         backgroundColor: blueGrey[50],
     },
     gridList: {
-        width: 500,
-        height: 450,
+        width: 500
     },
     subheader: {
         width: '100%',
