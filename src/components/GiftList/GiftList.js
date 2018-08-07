@@ -27,7 +27,7 @@ const giftList = (props) => {
     const items = props.gifts.map((gifts, index) => {
         return (
             <Aux>
-                <GiftListItem />
+                <GiftListItem delete={props.delete}/>
                 {/* <Divider /> */}
                 {index !== props.gifts.length - 1 && <Divider />}
             </Aux>
@@ -36,7 +36,7 @@ const giftList = (props) => {
     return (
         <List>
             {items}
-            <Button variant="fab" className={classes.fab} color="secondary">
+            <Button onClick={() => props.add()} variant="fab" className={classes.fab} color="secondary">
                 <AddIcon />
             </Button>
         </List>

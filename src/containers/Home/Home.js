@@ -4,6 +4,8 @@ import Paper from '@material-ui/core/Paper';
 import HomeIcon from '@material-ui/icons/Home';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import { connect } from 'react-redux';
+import * as actionTypes from '../../store/actions';
 
 const styles = theme => ({
     root: {
@@ -12,9 +14,6 @@ const styles = theme => ({
 });
 
 class Home extends Component {
-    state = {
-        gifts: [1, 2, 3]
-    }
 
     render() {
         return (
@@ -25,11 +24,24 @@ class Home extends Component {
                 </Typography>
 
                 <Paper square={true}>
-                    <GiftList gifts={this.state.gifts} />
+                    <GiftList gifts={this.props.gifts} delete={this.props.onGiftRemove} add={this.props.onGiftAdd} />
                 </Paper>
             </div>
         )
     }
 }
 
-export default withStyles(styles)(Home);
+const mapStateToProps = state => {
+    return {
+        gifts: state.gifts
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onGiftAdd: () => dispatch({ type: actionTypes.ADD_GIFT }) ,
+        onGiftRemove: () => dispatch({ type: actionTypes.REMOVE_GIFT })
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(Home));

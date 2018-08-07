@@ -33,10 +33,10 @@ const giftListItem = (props) => {
             />
             <ListItemText primary="Dummy" />
             <ListItemSecondaryAction>
-                <IconButton>
+                <IconButton onClick={()=> console.log('onEdit!')}>
                     <EditIcon />
                 </IconButton>
-                <IconButton>
+                <IconButton onClick={() => props.delete()}>
                     <DeleteIcon />
                 </IconButton>
             </ListItemSecondaryAction>
